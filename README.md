@@ -14,6 +14,14 @@ Welcome to the mystical swamps of automation, where your trusty Frog Hunter bot 
 
 Before you embark on your frog-hunting adventure, you must prepare your tools.
 
+## Prerequisites
+
+Before we embark on this adventure, you'll need to have Node.js installed in your environment. If you haven't already, jump over to the [Node.js website](https://nodejs.org/) and download the latest version for your operating system.
+
+## Setup
+
+Once you've got Node.js installed, it's time to set up the autoclicker. Here's how:
+
 1. Clone this repository using your terminal:
    ```sh
    git clone https://github.com/Crath-Bandicoot/frog-crypto-autoclicker.git
