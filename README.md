@@ -50,10 +50,10 @@ Replace your-email@example.com and your-magical-password with your Zupass login 
 2. Added Frog Credentials here:
    ```sh
    USER_EMAIL=your-email@example.com
-   USER_PASSWORD=your-magical-password
+   USER_PASSWORD="your-magical-password"
    ```
 3. After SAVING, to run the app simply run this command
    ```sh
    npm start
    ```
-4. To close app either close browser or ctrl + c in terminal
+4. To close the app either close the browser or ctrl + c in terminal
