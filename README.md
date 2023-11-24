@@ -8,7 +8,6 @@ Welcome to the mystical swamps of automation, where your trusty Frog Hunter bot 
 - Environmentally friendly - runs in your local pond (local machine).
 - Magically identifies buttons ready for a click.
 - Never tires, unlike its human companions.
-- Uses ancient `.env` scrolls to keep your secrets safe.
 
 ## 📜 Ancient Scroll Setup (Installation)
 
@@ -43,17 +42,16 @@ Once you've got Node.js installed, it's time to set up the autoclicker. Here's h
 
 Replace your-email@example.com and your-magical-password with your Zupass login credentials. Fear not, this scroll is enchanted to be invisible to prying eyes.
 
-1. Create a .env file
-
-   ![ENV](image.png)
-
-2. Added Frog Credentials here:
+1. Added Frog Credentials here in frogClicker.ts:
    ```sh
-   USER_EMAIL=your-email@example.com
-   USER_PASSWORD=your-magical-password
+   const accounts = [
+   { email: "user1@example.com", password: "password1" },
+   { email: "user2@example.com", password: "password2" },
+   // ... add more accounts as needed, up to 10
+   ];
    ```
-3. After SAVING, to run the app simply run this command
+2. After SAVING, to run the app simply run this command
    ```sh
    npm start
    ```
-4. To close app either close browser or ctrl + c in terminal
+3. To close app either close browser or ctrl + c in terminal

@@ -3,24 +3,28 @@
 // Users must provide their own login details and are responsible for the use of this script.
 
 import { chromium, Page } from "playwright";
-import "dotenv/config";
 
-const userEmail = process.env.USER_EMAIL || "your-email@example.com"; // Set your email here or as an environment variable
-const userPassword = process.env.USER_PASSWORD || "your-password"; // Set your password here or as an environment variable
 const loginUrl = "https://zupass.org/#/login";
 const secondDivSelector = "div.sc-bhqpjJ.byyOfH";
 const buttonToClickText = /^search /i;
 const loggedInIndicator = "div.sc-iHbSHJ";
 
-async function login(page: Page) {
+// Hardcoded list of user emails and passwords
+const accounts = [
+  { email: "user1@example.com", password: "password1" },
+  { email: "user2@example.com", password: "password2" },
+  // ... add more accounts as needed, up to 10
+];
+
+async function login(page: Page, email: string, password: string) {
   await page.goto(loginUrl, { waitUntil: "domcontentloaded" });
-  await page.fill('input[placeholder="email address"]', userEmail);
+  await page.fill('input[placeholder="email address"]', email);
   await page.click('button[type="submit"]:has-text("Continue")');
   await page.waitForSelector('input[type="password"]', { state: "visible" });
-  await page.fill('input[type="password"]', userPassword);
+  await page.fill('input[type="password"]', password);
   await page.click('button[type="submit"]:has-text("Login")');
   await page.waitForSelector(loggedInIndicator, { timeout: 10000 });
-  console.log("Login successful - logged-in element found");
+  console.log(`Login successful for ${email}`);
 }
 
 async function navigateToButtonPage(page: Page) {
@@ -53,15 +57,16 @@ async function clickButtonIfReady(page: Page) {
 }
 
 async function pollForButtonToBeReady(page: Page) {
-  const pollingInterval = 5000;
+  const pollingInterval = 30000;
   setInterval(async () => {
     await clickButtonIfReady(page);
   }, pollingInterval);
 }
 
-async function main() {
+async function handleAccount(account: { email: string; password: string }) {
   const browser = await chromium.launch({ headless: false });
   const page = await browser.newPage();
+  await login(page, account.email, account.password);
 
   page.on("console", (message) =>
     console.log(`Browser console log: ${message.text()}`)
@@ -72,9 +77,12 @@ async function main() {
     }
   });
 
-  await login(page);
   await navigateToButtonPage(page);
   await pollForButtonToBeReady(page);
+}
+async function main() {
+  // Start handling each account in a separate browser instance
+  await Promise.all(accounts.map(handleAccount));
 }
 
 main().catch((err) => console.error("Unhandled error:", err));
