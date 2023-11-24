@@ -54,4 +54,4 @@ Replace your-email@example.com and your-magical-password with your Zupass login 
    ```sh
    npm start
    ```
-3. To close app either close browser or ctrl + c in terminal
+3. To close the app either close the browser or ctrl + c in terminal
