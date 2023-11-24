@@ -13,7 +13,7 @@ const loggedInIndicator = "div.sc-iHbSHJ";
 const accounts = [
   { email: "user1@example.com", password: "password1" },
   { email: "user2@example.com", password: "password2" },
-  // ... add more accounts as needed, up to 10
+  // ... add more accounts as needed, upper limit not tested.
 ];
 
 async function login(page: Page, email: string, password: string) {
