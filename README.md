@@ -16,7 +16,7 @@ Before you embark on your frog-hunting adventure, you must prepare your tools.
 
 1. Clone this repository using your terminal:
    ```sh
-   git clone https://github.com/YourGitHub/frog-crypto-autoclicker.git
+   git clone https://github.com/Crath-Bandicoot/frog-crypto-autoclicker.git
    ```
 2. Open Cloned Repo:
    ```sh
