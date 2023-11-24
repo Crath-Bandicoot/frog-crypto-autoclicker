@@ -1,4 +1,4 @@
-# 🐸 Frog Hunter - The Ultimate Frog-Crypto Autoclicker 🐸
+# 🐸 Frog Hunter - The Ultimate Frog-Crypto Autoclicker
 
 Welcome to the mystical swamps of automation, where your trusty Frog Hunter bot awaits to leap into action! This little froggy friend tirelessly searches for opportunities, clicking buttons on the mystical [Zupass](https://zupass.org/#/login) marshlands whenever they emerge from the mists.
 
@@ -32,6 +32,7 @@ Before you embark on your frog-hunting adventure, you must prepare your tools.
 Replace your-email@example.com and your-magical-password with your Zupass login credentials. Fear not, this scroll is enchanted to be invisible to prying eyes.
 
 1. Create a .env file
+
    ![ENV](image.png)
 
 2. Added Frog Credentials here:
