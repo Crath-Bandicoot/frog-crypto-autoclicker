@@ -31,8 +31,15 @@ Before you embark on your frog-hunting adventure, you must prepare your tools.
 
 Replace your-email@example.com and your-magical-password with your Zupass login credentials. Fear not, this scroll is enchanted to be invisible to prying eyes.
 
-3. Added Frog Credentials here:
+1. Create a .env file
+   ![ENV](image.png)
+
+2. Added Frog Credentials here:
    ```sh
    USER_EMAIL=your-email@example.com
    USER_PASSWORD=your-magical-password
+   ```
+3. After SAVING, to run the app simply run this command
+   ```sh
+   npm start
    ```
