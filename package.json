@@ -1,0 +1,27 @@
+{
+  "name": "frog-crypto-autoclicker",
+  "version": "1.0.0",
+  "description": "A Frog Hunter that will search far and wide for you!",
+  "main": "frogClicker.ts",
+  "scripts": {
+    "start": "ts-node frogClicker.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "playwright",
+    "automation",
+    "autoclicker",
+    "frog-crypto"
+  ],
+  "author": "CrathBandicoot",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "playwright": "^1.40.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.9.4",
+    "ts-node": "^10.9.1",
+    "typescript": "^5"
+  }
+}
