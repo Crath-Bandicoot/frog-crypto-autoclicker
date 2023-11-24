@@ -34,6 +34,10 @@ Once you've got Node.js installed, it's time to set up the autoclicker. Here's h
    ```sh
    npm install
    ```
+4. Install Playwright Dependencies:
+   ```sh
+   npx playwright install
+   ```
 
 ## 🗝️ Securing the Magic Words (Environment Variables)
 
@@ -52,3 +56,4 @@ Replace your-email@example.com and your-magical-password with your Zupass login 
    ```sh
    npm start
    ```
+4. To close app either close browser or ctrl + c in terminal
